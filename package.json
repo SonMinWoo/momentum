@@ -2,7 +2,7 @@
   "name": "momentum",
   "version": "1.0.0",
   "description": "",
-  "main": "docs/index.html",
+  "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
