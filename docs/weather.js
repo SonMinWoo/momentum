@@ -31,7 +31,7 @@ function handleGeoSuccess(position) {
 }
 
 function handleGeoError() {
-  console.log("Can't read location");
+  weather.innerText = `:( Can't get your geolocation`;
 }
 
 function askForCoords() {

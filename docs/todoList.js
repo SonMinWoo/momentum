@@ -11,7 +11,7 @@ function handleMove(event) {
 
   if (ul.className === "pending--list") {
     pendingList.removeChild(li);
-    btn.innerText = "<";
+    btn.innerText = "Pending";
     finishedList.appendChild(li);
     let changedStorage = pending.filter(function(toDo) {
       return toDo.id !== parseInt(li.id, 10);
@@ -23,7 +23,7 @@ function handleMove(event) {
     finished = finished.concat(moveObj);
   } else if (ul.className === "finished--list") {
     finishedList.removeChild(li);
-    btn.innerText = "☑";
+    btn.innerText = "Finished";
     pendingList.appendChild(li);
     let changedStorage = finished.filter(function(toDo) {
       return toDo.id !== parseInt(li.id, 10);
@@ -76,13 +76,13 @@ function createLi(text, type, id, check) {
     id: id
   };
 
-  delBtn.innerText = "X";
+  delBtn.innerText = "Remove";
 
   if (check === "P") {
-    downBtn.innerText = "☑";
+    downBtn.innerText = "Finished";
     pending.push(toDoObj);
   } else {
-    downBtn.innerText = "<";
+    downBtn.innerText = "Pending";
     finished.push(toDoObj);
   }
 
