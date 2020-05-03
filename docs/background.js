@@ -17,5 +17,7 @@ function genRand() {
 function bgInit() {
   const randNum = genRand();
   paintImage(randNum);
+  const loading = document.querySelector(".loading");
+  loading.style.display = "none";
 }
 bgInit();
